@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <title>Responsive Header</title>
+</head>
+<body>
+    <header class="header">
+        <button class="menu-button" onclick="openMenu()">☰</button>
+        <div class="logo"><img src="Img/logo.png"></div>
+        <div class="profile-icon" onclick="toggleProfileMenu()"><img id="profile" src="Img/user-avatar.png">Jérémy</div>
+        <div class="profile-menu" id="profileMenu">
+            <a href="#">Profile</a>
+            <a href="#">Logout</a>
+        </div>
+        
+        <div class="side-menu" id="sideMenu">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()"><img src="Img/supprimer.png"></a>
+        <a id="side" href="#">Requests</a>
+        <a href="#">Settings</a>
+        <a href="Events.php">Help</a>
+    </div>
+        
+    </header>
+    <script>
+         function openMenu() {
+            document.getElementById("sideMenu").style.width = "250px";
+        }
+
+        function closeMenu() {
+            document.getElementById("sideMenu").style.width = "0";
+        }
+        function toggleProfileMenu() {
+            const menu = document.getElementById('profileMenu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
